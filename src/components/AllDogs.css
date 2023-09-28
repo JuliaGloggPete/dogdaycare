@@ -1,0 +1,97 @@
+.dogPicIn{
+    height: 200px;
+    width:200px;
+    overflow: hidden;
+    border-radius: 50%;
+        border: 10px solid green;
+    max-width: 80vw;
+    max-height: 80vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-left: 30px;
+        margin-bottom: 15px;
+        margin-top: 10px;
+
+        align-self: center;
+    }
+
+    .dogPicOut{
+        height: 200px;
+        width:200px;
+        overflow: hidden;
+        border-radius: 50%;
+            border: 10px solid burlywood;
+        max-width: 80vw;
+        max-height: 80vw;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-left: 25px;
+            margin-bottom: 10px;
+            align-self: center;
+            opacity: 75%;
+        }
+
+   /*.dogPic img{
+     
+    height:  100%;
+    }*/
+   
+
+    .dogWidth {
+       
+        width: 100%;
+    }
+
+    .dogHeight {
+
+        height:  100%;
+    }
+    .dog{
+        width: calc(25% - 20px); 
+        margin: 5px;
+        background-color: antiquewhite;
+      /*  display: flex;
+        flex-direction: column;*/
+        
+       
+    }
+    .h3Dog{
+        width: 100%;
+        justify-self: flex-start;
+        margin: 25px;
+        align-self: center;
+    }
+
+    #allDogs{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin: 0 auto ;
+        /*background-image: url('../assets/background.jpg');*/
+        max-width:1200px;
+        background-color: burlywood;
+     
+
+    }
+    .hidden{
+        /*background-color: aliceblue;*/
+        display:none;
+
+    }
+    #overlay {
+        display: none;
+        position: fixed;
+        width: 100vw;
+        height: 100vh;
+        background-image: url('../assets/background.jpg');
+        background-size: 100%;
+
+        justify-content: center;
+        align-items: center;
+    }
+
+    #overlay.show{
+        display: flex;
+    }

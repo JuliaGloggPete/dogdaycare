@@ -1,0 +1,54 @@
+body{
+    background-color: bisque;
+}
+
+
+.circle{
+    height: 400px;
+    width:400px;
+    overflow: hidden;
+    border-radius: 50%;
+        border: 10px solid grey;
+    max-width: 80vw;
+    max-height: 80vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    
+    }
+    .circle img {
+      width: 100%
+    }
+    p{
+        margin: 5px   ;
+    }
+    #welcome_section{
+      display: flex;
+      flex-direction: column;
+      background-size: 100%;
+         background-image: url('../assets/background.jpg');
+   
+    }
+    
+    button{
+        margin-bottom: 5rem;
+    }
+
+
+
+@media(max-width: 800px){
+    .circle{
+      height: 200px;
+  width:200px;
+  overflow: hidden;
+  border-radius: 50%;
+      border: 10px solid grey;
+  max-width: 80vw;
+  max-height: 80vw;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      align-self: center;
+    }
+  
+  }

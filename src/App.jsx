@@ -1,34 +1,103 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react';
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
-import './App.css'
+import './App.css';
+//import './AllDogs.css';
+import Welcome from './components/Welcome';
+import AllDogs from './components/AllDogs';
+import DogDetails from './components/DogDetails';
+import pawImage from './assets/paw.jpg';
+import backgroundImage from './assets/background.jpg';
 
+// https://api.jsonbin.io/v3/b/650bf228bb1aab22f2c6018d
+//MasterKey $2a$10$Q.jHslDi5J3WWkt5MGrvoezfIBCJlg5bANY6tMh7MYGWgQRRMzfh2
+//jsonbin123!
+// theoretiktska jag lägga in data om det skulle uppdateras men det gör den ju inte
 function App() {
-  const [count, setCount] = useState(0)
+
+  const WELCOME = 'welcome', ALLDOGS = 'allDogs', DOGDETAILS = 'dogDetails';
+
+  let content = null;
+  const [currentScreen, setCurrentScreen] = useState(WELCOME)
+
+ const[data, setData] = useState([]);
+//"https://api.jsonbin.io/v3/b/650a7ebece39bb6dce7f5683"
+//const apiURL = 'https://api.jsonbin.io/v3/b/650d338d12a5d376598172f6'
+//"https://api.jsonbin.io/v3/b/650a7ebece39bb6dce7f5683"
+const apiURL = 'https://api.jsonbin.io/v3/b/65112e6654105e766fb95cc8'
+
+
+const fetchData = async () => {
+  try {
+    const response = await fetch(apiURL);
+    if (!response.ok) {
+      throw new Error("Network response was not ok");
+    }
+    console.log("hej");
+
+    const dogData = await response.json();
+    
+    setData(dogData.record);
+  /* if (dogData != []) {
+    let dogs = data;
+    console.log("allla ",dogs);
+   }*/
+
+  } catch (error) {
+    console.error("Error fetching data:", error);
+  }
+  console.log({data});
+ 
+ 
+};
+
+//
+
+  useEffect(() => {
+
+  fetchData();
+  }, [])
+  
+  useEffect(() => {
+
+    console.log({data})
+
+    
+    }, [data])
+  
+
+  switch(currentScreen){
+
+    case WELCOME :
+      content = <Welcome pawImage={pawImage} backgroundImage ={backgroundImage} nextScreen={() => setCurrentScreen(ALLDOGS)}/>
+      break;
+      
+    case ALLDOGS:
+      content = <AllDogs dogs={data} nextScreen={() => setCurrentScreen(DOGDETAILS)}/>
+      //dogs={data}
+     // console.log("jalla",{data})
+      break;
+    case DOGDETAILS :
+      content = <DogDetails nextScreen={() => setCurrentScreen(ALLDOGS)}/>
+      break;
+
+      default:
+        content = <Welcome pawImage={pawImage} />
+
+
+
+
+  }
 
   return (
-    <>
+   
       <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+     {content}
+        
+
+       
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+    
   )
 }
 
