@@ -68,8 +68,8 @@
 #overlay {
     display: none;
     position: fixed;
-    width: 100vw;
-    height: 100vh;
+    min-width: 320px;
+    min-height: 100vh;
     background-image: url('../assets/background.jpg');
     background-size: 100%;
     justify-content: center;
@@ -78,6 +78,14 @@
 
 #overlay.show {
     display: flex;
+}
+
+@media (max-width: 1200px) {
+    .dog {
+        width: calc(30% - 20px);
+        margin: 5px;
+        background-color: antiquewhite;
+    }
 }
 
 @media (max-width: 800px) {

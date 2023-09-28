@@ -25,6 +25,7 @@ body{
     }
     #welcome_section{
       display: flex;
+   
       flex-direction: column;
       flex-wrap: wrap;
       justify-content: center;
@@ -33,6 +34,7 @@ body{
          background-image: url('../assets/background.jpg');
    min-width: 80vw;
    min-height: 80vh;
+ 
     }
     
     button{
