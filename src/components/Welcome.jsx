@@ -16,8 +16,8 @@ function Welcome(props) {
 
             <div className="circle"> <img src={props.pawImage} alt="Paw" /> </div>
             <div>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti, sit, consectetur in reiciendis quos dolorum placeat ut at iure error facere? Veniam ea suscipit nihil fugit nesciunt, aliquam delectus iste.</p>
-                <button onClick={props.nextScreen}>Ja!</button>
+                <p>Välkommen.</p>
+                <button onClick={props.nextScreen}>Logga in!</button>
             </div>
         </section>
     );

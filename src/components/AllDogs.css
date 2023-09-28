@@ -1,97 +1,165 @@
-.dogPicIn{
+.dogPicIn {
     height: 200px;
-    width:200px;
+    width: 200px;
     overflow: hidden;
     border-radius: 50%;
-        border: 10px solid green;
+    border: 10px solid green;
     max-width: 80vw;
     max-height: 80vw;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin-left: 30px;
-        margin-bottom: 15px;
-        margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 30px;
+    margin-bottom: 15px;
+    margin-top: 10px;
+    align-self: center;
+}
 
-        align-self: center;
-    }
+.dogPicOut {
+    height: 200px;
+    width: 200px;
+    overflow: hidden;
+    border-radius: 50%;
+    border: 10px solid burlywood;
+    max-width: 80vw;
+    max-height: 80vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 25px;
+    margin-bottom: 10px;
+    align-self: center;
+}
 
-    .dogPicOut{
-        height: 200px;
-        width:200px;
-        overflow: hidden;
-        border-radius: 50%;
-            border: 10px solid burlywood;
-        max-width: 80vw;
-        max-height: 80vw;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            margin-left: 25px;
-            margin-bottom: 10px;
-            align-self: center;
-            opacity: 75%;
-        }
+.dogWidth {
+    width: 100%;
+}
 
-   /*.dogPic img{
-     
-    height:  100%;
-    }*/
-   
+.dogHeight {
+    height: 100%;
+}
 
-    .dogWidth {
-       
-        width: 100%;
-    }
+.dog {
+    width: calc(25% - 20px);
+    margin: 5px;
+    background-color: antiquewhite;
+}
 
-    .dogHeight {
+.h3Dog {
+    width: 100%;
+    justify-self: flex-start;
+    margin: 25px;
+    align-self: center;
+}
 
-        height:  100%;
-    }
-    .dog{
-        width: calc(25% - 20px); 
+#allDogs {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0 auto;
+    max-width: 100vw;
+    background-color: burlywood;
+}
+
+.hidden {
+    display: none;
+}
+
+#overlay {
+    display: none;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background-image: url('../assets/background.jpg');
+    background-size: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+#overlay.show {
+    display: flex;
+}
+
+@media (max-width: 800px) {
+    .dog {
+        width: calc(50% - 10px);
         margin: 5px;
         background-color: antiquewhite;
-      /*  display: flex;
-        flex-direction: column;*/
-        
-       
-    }
-    .h3Dog{
-        width: 100%;
-        justify-self: flex-start;
-        margin: 25px;
-        align-self: center;
     }
 
-    #allDogs{
+    #allDogs {
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
-        margin: 0 auto ;
-        /*background-image: url('../assets/background.jpg');*/
-        max-width:1200px;
+        margin: 0 auto;
+        max-width: 80rem;
         background-color: burlywood;
-     
-
-    }
-    .hidden{
-        /*background-color: aliceblue;*/
-        display:none;
-
-    }
-    #overlay {
-        display: none;
-        position: fixed;
-        width: 100vw;
-        height: 100vh;
-        background-image: url('../assets/background.jpg');
-        background-size: 100%;
-
-        justify-content: center;
-        align-items: center;
     }
 
-    #overlay.show{
+    .dogPicIn,
+    .dogPicOut {
+        height: 150px;
+        width: 150px;
+        max-width: 40vw;
+        max-height: 40vw;
+        margin-left: 10px;
+        margin-bottom: 15px;
+        margin-top: 10px;
+    }
+}
+@media (max-width: 600px) {
+    .dog {
+        width: calc(50% - 10px);
+        margin: 5px;
+        background-color: antiquewhite;
+    }
+
+    #allDogs {
         display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between; /* Change from center to space-between */
+        margin: 0 auto;
+        max-width: 80rem;
+        background-color: burlywood;
     }
+
+    .dogPicIn,
+    .dogPicOut {
+        height: 150px;
+        width: 150px;
+        max-width: 40vw;
+        max-height: 40vw;
+        margin-left: 10px;
+        margin-bottom: 15px;
+        margin-top: 10px;
+    }
+}
+
+@media (max-width: 400px) {
+    .dog {
+        width: calc(100% - 10px);
+        margin: 5px;
+        background-color: antiquewhite;
+    }
+
+    #allDogs {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin: 0 auto;
+        max-width: 80rem;
+        background-color: burlywood;
+    }
+
+    .dogPicIn,
+    .dogPicOut {
+        height: 150px;
+        width: 150px;
+        max-width: 40vw;
+        max-height: 40vw;
+        margin-left: 25px;
+        margin-right: 25px;
+        margin-bottom: 15px;
+        margin-top: 10px;
+    }
+}

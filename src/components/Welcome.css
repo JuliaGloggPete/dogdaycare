@@ -4,8 +4,8 @@ body{
 
 
 .circle{
-    height: 400px;
-    width:400px;
+    height: 300px;
+    width:300px;
     overflow: hidden;
     border-radius: 50%;
         border: 10px solid grey;
@@ -14,6 +14,7 @@ body{
         display: flex;
         justify-content: center;
         align-items: center;
+      
     
     }
     .circle img {
@@ -25,9 +26,13 @@ body{
     #welcome_section{
       display: flex;
       flex-direction: column;
-      background-size: 100%;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      background-size: 300%;
          background-image: url('../assets/background.jpg');
-   
+   min-width: 80vw;
+   min-height: 80vh;
     }
     
     button{
