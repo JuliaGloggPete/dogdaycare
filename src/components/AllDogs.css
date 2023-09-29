@@ -68,16 +68,23 @@
 #overlay {
     display: none;
     position: fixed;
-    min-width: 320px;
+    width: 100vw;
     min-height: 100vh;
-    background-image: url('../assets/background.jpg');
-    background-size: 100%;
+    background-color: rgba(219,176, 127, 0.8);
+    /*background-image: url('../assets/background.jpg');
+    background-size: 100%;*/
     justify-content: center;
     align-items: center;
 }
 
 #overlay.show {
     display: flex;
+}
+#overlay.dog{
+    width: 100%;
+    margin: 5px;
+    background-color: antiquewhite;
+    border-radius: 20%;
 }
 
 @media (max-width: 1200px) {

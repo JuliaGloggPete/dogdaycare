@@ -39,12 +39,12 @@ const AllDogs = (props) => {
                 //dogDescription.className = "shown";
                 console.log('syntax problem')
                 overlay.classList.toggle('show')
-                
-              /*  if (dogElement){
-                dogDetail(dogElement)
-                }*/
-         
+                overlay.addEventListener('click', () => {
+                  overlay.removeChild(dogElement);
+                  overlay.classList.remove('show');
+              });
              })
+  
         
         });
       
@@ -52,9 +52,7 @@ const AllDogs = (props) => {
        
       }
 
-   //   overlay.addEventListener('click', () =>{
-     //   overlay.classList.toggle('hidden')
-     // })
+  
 
 
       const dogDetail = (dogElement) =>{
@@ -171,6 +169,7 @@ console.log({dogArray});
 
            </div>
         </section>
+        
 
     )
 }
