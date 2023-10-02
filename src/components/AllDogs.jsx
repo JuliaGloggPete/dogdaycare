@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import './AllDogs.css';
+import noImage from'../assets/noimage.png'
 
 const AllDogs = (props) => {
 
@@ -47,6 +48,9 @@ const AllDogs = (props) => {
     }
     const dogPic = document.createElement('img')
     dogPic.src = dog.img;
+    dogPic.onerror = function () {
+      dogPic.src = noImage
+    };
     dogPic.alt = dog.name;
     dogPic.onload = function () {
       if (dogPic.height > dogPic.width) {
@@ -137,6 +141,9 @@ const AllDogs = (props) => {
 
     const dogPic = document.createElement('img')
     dogPic.src = dog.img;
+    dogPic.onerror = function () {
+      dogPic.src = noImage
+    };
     dogPic.alt = dog.name;
 
 
@@ -151,61 +158,12 @@ const AllDogs = (props) => {
       }
     };
     dogPicContainer.appendChild(dogPic)
-    /*const dogDescription = document.createElement('div');
-    const dogSex = document.createElement('p')
-
-
-    if (dog.sex === "female") {
-
-      dogSex.innerText = `Tik`
-        ;
-    }
-    else {
-      //dogSex.innerText = `Kön: hane ${dog.sex}`;}
-
-      dogSex.innerText = `Hane`;
-    }
-
-    ;
-
-    dogDescription.appendChild(dogSex);
-
-    const chipNumber = document.createElement('p')
-    chipNumber.innerText = `Chipnumret: ${dog.chipNumber}`;
-    dogDescription.appendChild(chipNumber);
-
-    const ownerInformation = document.createElement('div')
-    const ownerHeading = document.createElement("h2");
-    ownerHeading.innerText = "Ägare"
-    ownerInformation.appendChild(ownerHeading);
-    const ownerName = document.createElement('p')
-    ownerName.innerText = `${dog.owner.name} ${dog.owner.lastName}`;
-    ownerInformation.appendChild(ownerName);
-
-
-    const ownerPhone = document.createElement('p')
-    ownerPhone.innerText = `Tel.: ${dog.owner.phoneNumber}`;
-    ownerInformation.appendChild(ownerPhone);
-
-    //dogDescription.className = 'hidden';
-
-    dogDescription.appendChild(ownerInformation)*/
 
     dogElement.appendChild(dogPicContainer);
 
     dogElement.appendChild(dogHeading);
 
-   // dogElement.appendChild(dogDescription);
-
-
-  /*  dogDescription.className = "hidden"
-    dogElement.addEventListener('click', () => {
-
-
-      dogDescription.classList = "show";
-
-      
-    });*/
+ 
 
     return dogElement;
 

@@ -61,9 +61,16 @@
     background-color: burlywood;
 }
 
-.hidden {
-    display: none;
+.dogDetail{
+    background-color: antiquewhite;
+    padding: 5px;
+    margin: 25px;
 }
+.dogDetail .dogPicIn .dogPicOut{
+    margin-right: 25px;
+}
+
+
 
 #overlay {
     display: none;
@@ -80,18 +87,21 @@
 #overlay.show {
     display: flex;
 }
-#overlay.dog{
+/*#overlay.dog{
     width: 100%;
     margin: 5px;
     background-color: antiquewhite;
     border-radius: 20%;
-}
+}*/
 
 @media (max-width: 1200px) {
     .dog {
         width: calc(30% - 20px);
         margin: 5px;
         background-color: antiquewhite;
+    }
+    .dogDetail .dogPicIn .dogPicOut{
+        margin-right: 45px;
     }
 }
 
@@ -101,6 +111,7 @@
         margin: 5px;
         background-color: antiquewhite;
     }
+
 
     #allDogs {
         display: flex;
@@ -148,54 +159,27 @@
         margin-bottom: 15px;
         margin-top: 10px;
     }
+    .dogDetail .dogPicIn .dogPicOut{
+      margin-left: 0px;
+    }
 }
-
 @media (max-width: 400px) {
     .dog {
-        width: calc(100% - 10px);
-        margin: 5px;
+        width: calc(100% - 5px);
+        /*margin: 5px;*/
         background-color: antiquewhite;
+    }
+    .dogDetail .dogPicIn .dogPicOut{
+       margin-left: 10;
+       align-self: center;
     }
 
-    #allDogs {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        margin: 10 auto;
-        max-width: 80rem;
-        background-color: burlywood;
-    }
-    #overlay.dog{
-        width: calc(100% - 10px);
-        margin: 5px;
-        background-color: antiquewhite;
-        border-radius: 20%;
-    }
+
     #overlay {
-        display: none;
-        position: fixed;
-        width: 100vw;
-        height: 100vh;
-        background-color: rgba(219,176, 127, 0.8);
-        /*background-image: url('../assets/background.jpg');
-        background-size: 100%;*/
-        justify-content: center;
-        align-items: center;
+    
+        width: 80vw;
+        min-height: 100vh;
     }
 
-#overlay.show {
-    display: flex;
 }
 
-    .dogPicIn,
-    .dogPicOut {
-        height: 150px;
-        width: 150px;
-        max-width: 40vw;
-        max-height: 40vw;
-        margin-left: 25px;
-        margin-right: 25px;
-        margin-bottom: 15px;
-        margin-top: 10px;
-    }
-}

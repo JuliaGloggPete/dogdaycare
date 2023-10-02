@@ -24,7 +24,9 @@ function App() {
 //"https://api.jsonbin.io/v3/b/650a7ebece39bb6dce7f5683"
 //const apiURL = 'https://api.jsonbin.io/v3/b/650d338d12a5d376598172f6'
 //"https://api.jsonbin.io/v3/b/650a7ebece39bb6dce7f5683"
-const apiURL = 'https://api.jsonbin.io/v3/b/65112e6654105e766fb95cc8'
+const apiURL = 'https://api.jsonbin.io/v3/b/650d338d12a5d376598172f6'
+
+//'https://api.jsonbin.io/v3/b/65112e6654105e766fb95cc8'
 
 
 const fetchData = async () => {
