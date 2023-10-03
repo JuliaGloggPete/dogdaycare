@@ -114,6 +114,11 @@ justify-content: center;
         width: calc(30% - 20px);
         margin: 5px;
         background-color: antiquewhite;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
     }
     .dogPic{
         height: 150px;
