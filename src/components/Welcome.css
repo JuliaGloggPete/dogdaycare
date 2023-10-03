@@ -1,5 +1,7 @@
 body{
     background-color: bisque;
+    padding: 0;
+    margin: 0;
 }
 
 
@@ -30,8 +32,10 @@ body{
       flex-wrap: wrap;
       justify-content: center;
       align-items: center;
-      background-size: 300%;
-         background-image: url('../assets/background.jpg');
+      background-color: burlywood;
+    
+     /* background-size: 100%;
+         background-image: url('../assets/paw.jpg');*/
    min-width: 80vw;
    min-height: 80vh;
  

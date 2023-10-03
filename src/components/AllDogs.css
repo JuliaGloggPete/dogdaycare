@@ -1,21 +1,4 @@
-.dogPicIn {
-    height: 200px;
-    width: 200px;
-    overflow: hidden;
-    border-radius: 50%;
-    border: 10px solid green;
-    max-width: 80vw;
-    max-height: 80vw;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-left: 30px;
-    margin-bottom: 15px;
-    margin-top: 10px;
-    align-self: center;
-}
-
-.dogPicOut {
+.dogPic {
     height: 200px;
     width: 200px;
     overflow: hidden;
@@ -26,9 +9,31 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-left: 25px;
-    margin-bottom: 10px;
+
+    margin-bottom: 15px;
+    margin-top: 10px;
     align-self: center;
+}
+
+#dogHeading {
+display:flex;
+justify-content: center;
+
+}
+.in{
+    height: 15px;
+    width: 15px;
+    background-color: green;
+    border-radius: 50%;
+    
+}
+.out{
+    background-color: brown;
+    height: 15px;
+    width: 15px;
+ 
+    border-radius: 50%;
+    
 }
 
 .dogWidth {
@@ -43,6 +48,11 @@
     width: calc(25% - 20px);
     margin: 5px;
     background-color: antiquewhite;
+    border-radius: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+ 
 }
 
 .h3Dog {
@@ -50,6 +60,7 @@
     justify-self: flex-start;
     margin: 25px;
     align-self: center;
+    font-size: x-large;
 }
 
 #allDogs {
@@ -63,12 +74,11 @@
 
 .dogDetail{
     background-color: antiquewhite;
+    border-radius: 15px;
     padding: 5px;
     margin: 25px;
 }
-.dogDetail .dogPicIn .dogPicOut{
-    margin-right: 25px;
-}
+
 
 
 
@@ -76,12 +86,17 @@
     display: none;
     position: fixed;
     width: 100vw;
-    min-height: 100vh;
+    min-height: 110vh;
     background-color: rgba(219,176, 127, 0.8);
     /*background-image: url('../assets/background.jpg');
     background-size: 100%;*/
     justify-content: center;
     align-items: center;
+    margin-top: -10vh;
+}
+.dogDetail .dogPic{
+    margin-right: 45px;
+    margin-left: 45px;
 }
 
 #overlay.show {
@@ -100,9 +115,11 @@
         margin: 5px;
         background-color: antiquewhite;
     }
-    .dogDetail .dogPicIn .dogPicOut{
-        margin-right: 45px;
+    .dogPic{
+        height: 150px;
+        width: 150px;
     }
+ 
 }
 
 @media (max-width: 800px) {
@@ -110,6 +127,10 @@
         width: calc(50% - 10px);
         margin: 5px;
         background-color: antiquewhite;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        align-items: center;
     }
 
 
@@ -117,21 +138,13 @@
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
+        align-content: center;
         margin: 0 auto;
-        max-width: 80rem;
+        max-width: 100rem;
         background-color: burlywood;
     }
 
-    .dogPicIn,
-    .dogPicOut {
-        height: 150px;
-        width: 150px;
-        max-width: 40vw;
-        max-height: 40vw;
-        margin-left: 10px;
-        margin-bottom: 15px;
-        margin-top: 10px;
-    }
+  
 }
 @media (max-width: 600px) {
     .dog {
@@ -148,38 +161,66 @@
         max-width: 80rem;
         background-color: burlywood;
     }
-
-    .dogPicIn,
-    .dogPicOut {
-        height: 150px;
-        width: 150px;
-        max-width: 40vw;
-        max-height: 40vw;
-        margin-left: 10px;
-        margin-bottom: 15px;
-        margin-top: 10px;
+    #overlay {
+ 
+     
+        margin-left: -8vw;
     }
-    .dogDetail .dogPicIn .dogPicOut{
-      margin-left: 0px;
-    }
+ 
+ 
 }
-@media (max-width: 400px) {
+@media (max-width: 420px) {
     .dog {
         width: calc(100% - 5px);
         /*margin: 5px;*/
         background-color: antiquewhite;
     }
-    .dogDetail .dogPicIn .dogPicOut{
-       margin-left: 10;
-       align-self: center;
+    .dogPic{
+        height: 130px;
+        width: 130px;
     }
-
+    .dogDetail .dogPic{
+        margin-right: 25px;
+        margin-left: 25px;
+    }
 
     #overlay {
-    
-        width: 80vw;
-        min-height: 100vh;
+ 
+        margin-top: -10vh;
+        margin-left: -8vw;
     }
+
+
+
+}
+
+@media (max-height: 500px) {
+    #overlay {
+        display: none;
+        position: fixed;
+        width: 100vw;
+        max-height: 100vh;
+        background-color: rgba(219,176, 127, 0.8);
+        /*background-image: url('../assets/background.jpg');
+        background-size: 100%;*/
+        flex-direction: row;
+       
+
+        margin-top: -10vh;
+    }
+    .dogDetail{
+        background-color: antiquewhite;
+        flex-direction: row;
+        flex-wrap: wrap;
+        border-radius: 15px;
+        padding: 5px;
+       
+    }
+    .dogDetail .dogPic{
+       display: none;
+    }
+
+
 
 }
 

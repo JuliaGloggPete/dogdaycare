@@ -40,12 +40,8 @@ const AllDogs = (props) => {
 
         
     const dogPicContainer = document.createElement('div');
-    if (dog.present) {
-      dogPicContainer.className = 'dogPicIn';
-    }
-    else {
-      dogPicContainer.className = 'dogPicOut';
-    }
+    
+      dogPicContainer.className = 'dogPic';
     const dogPic = document.createElement('img')
     dogPic.src = dog.img;
     dogPic.onerror = function () {
@@ -127,14 +123,22 @@ const AllDogs = (props) => {
 
     const dogHeading = document.createElement('h2');
     dogHeading.innerHTML = `${dog.name} ${"\u{1F43E}"}`;
+    dogHeading.id = "dogHeading";
 
     const dogPicContainer = document.createElement('div');
+    
+    dogPicContainer.className = 'dogPic';
+   
+
+    const inOrOutCircle = document.createElement('div');
     if (dog.present) {
-      dogPicContainer.className = 'dogPicIn';
+      inOrOutCircle.className = 'in';
     }
     else {
-      dogPicContainer.className = 'dogPicOut';
+      inOrOutCircle.className = 'out';
     }
+
+    dogHeading.appendChild(inOrOutCircle)
 
 
 
