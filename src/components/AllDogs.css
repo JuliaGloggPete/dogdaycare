@@ -50,6 +50,7 @@ justify-content: center;
     background-color: antiquewhite;
     border-radius: 15px;
     display: flex;
+    flex-direction: column;
     flex-wrap: wrap;
     justify-content: center;
  

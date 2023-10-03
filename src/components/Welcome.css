@@ -45,7 +45,12 @@ body{
         margin-bottom: 5rem;
     }
 
+@media(min-width: 1500px){
 
+    #welcome_section{
+        margin-left: -130px;
+    }
+}
 
 @media(max-width: 800px){
     .circle{
