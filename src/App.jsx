@@ -5,7 +5,7 @@ import './App.css';
 //import './AllDogs.css';
 import Welcome from './components/Welcome';
 import AllDogs from './components/AllDogs';
-import DogDetails from './components/DogDetails';
+
 import pawImage from './assets/paw.jpg';
 import backgroundImage from './assets/background.jpg';
 
@@ -15,7 +15,7 @@ import backgroundImage from './assets/background.jpg';
 // theoretiktska jag lägga in data om det skulle uppdateras men det gör den ju inte
 function App() {
 
-  const WELCOME = 'welcome', ALLDOGS = 'allDogs', DOGDETAILS = 'dogDetails';
+  const WELCOME = 'welcome', ALLDOGS = 'allDogs';
 
   let content = null;
   const [currentScreen, setCurrentScreen] = useState(WELCOME)
@@ -79,9 +79,7 @@ const fetchData = async () => {
       //dogs={data}
      // console.log("jalla",{data})
       break;
-    case DOGDETAILS :
-      content = <DogDetails nextScreen={() => setCurrentScreen(ALLDOGS)}/>
-      break;
+ 
 
       default:
         content = <Welcome pawImage={pawImage} />

@@ -51,6 +51,7 @@ body{
   footer {
     background-image: url('../assets/background.jpg');
     background-size: 100%;
+    background-repeat: no-repeat;
     opacity: 85%;
     width: 100%;
     margin-top: 3rem ;
@@ -64,6 +65,9 @@ body{
 
   footer div {
     text-align: left;
+    /*background-color: rgba(240,206, 210, 0.8);*/
+
+
   }
 
     
@@ -98,6 +102,13 @@ body{
   @media(max-width: 400px){
     footer{
         background-size: 200%;
+        flex-direction:column;
+      
     }
-  
+    footer div {
+        text-align: center;
+        background-color: rgba(240,206, 210, 0.8);
+        margin-top: 2rem;
+        padding: 1rem;
+      }
   }
