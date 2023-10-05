@@ -1,3 +1,4 @@
+import AllDogs from './AllDogs';
 import './AllDogs.css';
 import './Welcome.css';
 
@@ -10,15 +11,45 @@ function Welcome(props) {
        
         >
 
-            <h2>Hunddagis tuggben</h2>
+            <h2 style={{fontFamily:'paw-wow-font', fontSize:'44px'}}>HUNDDAGIS "TUGGBEN"</h2>
 
             <div className="circle"> <img src={props.pawImage} alt="Paw" /> </div>
             <div>
                 <p>Välkommen.</p>
                 <button onClick={props.nextScreen}>Logga in!</button>
             </div>
+            <footer>    
+            <div>
+                <address>
+                    <strong>Adress</strong> <br />
+                    Hundgata 3 <br></br>
+                    123 456 Hundstaden
+                    <br />
+                    Tel: 1234 987654
+
+
+                </address>
+            </div>
+            <div>
+                <strong>Socialmeadia: </strong><br />
+                fakebook <br />
+                finstagram <br />
+                fakedIN <br />
+            </div>
+
+            </footer>
+
+            
+
+
+
         </section>
+        
     );
+
+  
+       
+    
 }
 
 export default Welcome;
